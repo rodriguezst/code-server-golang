@@ -43,7 +43,8 @@ RUN set -eux; \
 	export PATH="/usr/local/go/bin:$PATH"; \
 	go version
 
-ENV GOPATH /go
+ENV GOPATH /go 
+ENV GOPATH $GOPATH/bin
 ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && go get -u github.com/go-delve/delve/cmd/dlv && chmod -R 777 "$GOPATH"
