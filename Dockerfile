@@ -46,4 +46,4 @@ RUN set -eux; \
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 
-RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH" && go get -u github.com/go-delve/delve/cmd/dlv
+RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && go get -u github.com/go-delve/delve/cmd/dlv && chmod -R 777 "$GOPATH"
