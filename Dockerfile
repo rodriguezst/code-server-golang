@@ -1,6 +1,7 @@
 FROM linuxserver/code-server
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN env DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y --no-install-recommends \
+		wget \
 		g++ \
 		gcc \
 		libc6-dev \
